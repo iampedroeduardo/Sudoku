@@ -104,7 +104,7 @@ function TestaTab(){
         tela=[
             '<div class="container">',
             '    <div class="box">',
-            '        <h1>Parabéns! Você ganhou! Seu tempo foi de'+parseInt(tempo/60)+' minutos e'+tempo%60+' segundos</h1>',
+            '        <h1>Parabéns! Você ganhou! Seu tempo foi de '+parseInt(tempo/60)+' minutos e '+tempo%60+' segundos</h1>',
             '        <a href="index.html"><button class="botao">Jogar Novamente</button></a>',
             '    <div>',
             '</div>'
