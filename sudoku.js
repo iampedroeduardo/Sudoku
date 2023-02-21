@@ -283,7 +283,22 @@ function DesenhaTab(){
         }
     }
 }
+function AumentarTempo(){
+    tempo++
+    min=""+parseInt(tempo/60);
+    seg=""+tempo%60;
+    if(min.length<2){
+        min="0"+min;
+    }
+    if(seg.length<2){
+        seg="0"+seg;
+    }
+    t=min+":"+seg;
+    contador=document.getElementById("tempo");
+    contador.innerHTML=t;
+}
 var tab=[], hiddentab=[];
+var tempo=0;
 var quad1=[[],[],[]],quad2=[[],[],[]],quad3=[[],[],[]],quad4=[[],[],[]],quad5=[[],[],[]],quad6=[[],[],[]],quad7=[[],[],[]],quad8=[[],[],[]],quad9=[[],[],[]];
 var pos=[];
 var posicao;
@@ -291,6 +306,7 @@ var erros=0;
 CriaPos();
 CriaTab();
 DesenhaTab();
+setInterval(AumentarTempo,1000);
 um=document.getElementById("1");
 um.addEventListener("click",ColocaNumero)
 dois=document.getElementById("2");
