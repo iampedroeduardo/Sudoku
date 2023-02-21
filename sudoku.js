@@ -100,10 +100,11 @@ function TestaTab(){
         }
     }
     if(tof){
+        clearInterval(intervalo);
         tela=[
             '<div class="container">',
             '    <div class="box">',
-            '        <h1>Parabéns! Você ganhou!</h1>',
+            '        <h1>Parabéns! Você ganhou! Seu tempo foi de'+parseInt(tempo/60)+' minutos e'+tempo%60+' segundos</h1>',
             '        <a href="index.html"><button class="botao">Jogar Novamente</button></a>',
             '    <div>',
             '</div>'
@@ -306,7 +307,7 @@ var erros=0;
 CriaPos();
 CriaTab();
 DesenhaTab();
-setInterval(AumentarTempo,1000);
+var intervalo=setInterval(AumentarTempo,1000);
 um=document.getElementById("1");
 um.addEventListener("click",ColocaNumero)
 dois=document.getElementById("2");
